@@ -1,0 +1,26 @@
+<html>
+<head>
+<style type="text/css">
+table {border:solid 2px gray}
+</style>
+<script type="text/javascript">
+function test(){
+var par = document.getElementById ("par");
+for(var i=1; i<10 ; i++)
+{
+    var row = par.insertRow(i-1);
+    for(var j=1; j<10 ; j++)
+    {
+      var cell = row.insertCell(j-1);
+      cell.innerHTML = i+'*'+j+'='+i*j;
+    }    
+}
+}
+</script>
+</head>
+<body>
+<table id="par" align="center">
+<caption><input value="Click" type="button" onclick="test()" /></caption>
+</table>
+</body>
+</html>

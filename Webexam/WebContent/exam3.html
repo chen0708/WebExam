@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jQuery/jquery.min.js"></script>
+<title>九九乘法表</title>
+</head>
+<body>
+	<h1>
+		<center>九九乘法口诀表</center>
+	</h1>
+	<hr />
+	<form id="my_form" style="text-align: center;">
+		<input type="button" id="button1" value="打印" onclick="show()">&nbsp;&nbsp;
+		<input type="button" id="button2" value="统计" onclick="show2()">&nbsp;&nbsp;
+		<input type="button" id="button3" value="样式">
+	</form>
+
+	<table id="my_table" style="width: 500px; height: 250px; margin: auto;"
+		border="1px">
+	</table>
+	<script type="text/javascript">
+		function show() {
+			var table = document.getElementById("my_table");
+			for (var i = 1; i <= 9; i++) {
+				var trn = document.createElement("tr");
+				table.appendChild(trn);
+				for (var j = 1; j <= i; j++) {
+					var td = document.createElement("td");
+					trn.appendChild(tdn);
+					tdn.innerHTML = i + '*' + j + '=' + i * j;
+				}
+
+			}
+		}}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <tr>
+			<td id="id1" colspan="9" rowspan="9"></td>
+			<td id="1" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="2" style="width: 50px;">
+			
+			</td>
+		</tr>
+		<tr>
+			<td id="3" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="4" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="5" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="6" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="7" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="8" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="9" style="width: 50px;"></td>
+		</tr>
+		<tr>
+			<td id="11" style="width: 50px;"></td>
+			<td id="12" style="width: 50px;"></td>
+			<td id="13" style="width: 50px;"></td>
+			<td id="14" style="width: 50px;"></td>
+			<td id="15" style="width: 50px;"></td>
+			<td id="16" style="width: 50px;"></td>
+			<td id="17" style="width: 50px;"></td>
+			<td id="18" style="width: 50px;"></td>
+			<td id="19" style="width: 50px;"></td>
+		</tr> -->

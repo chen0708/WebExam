@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>九九乘法表</title>
+<script type="text/javascript" src="jQuery/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1>
+		<center>九九乘法口诀表</center>
+	</h1>
+	<hr />
+	<form id="my_form" style="text-align: center;">
+		<input type="button" id="button1" value="打印" onclick="show()">&nbsp;&nbsp;
+		<input type="button" id="button2" value="统计" onclick="show2()">&nbsp;&nbsp;
+		<input type="button" id="button3" value="样式">
+
+	</form>
+
+
+	<table  id="my_table"  style="width: 500px; height: 250px; margin:auto;"  border="1px";>
+	<tr>
+	 <td id="td1"></td>
+	 <td id="td2"></td>
+	</tr>
+	<tr>
+	 <td id="td3"></td>
+	 <td id="td4"></td>
+	</tr>
+	</table>
+	<script type="text/javascript">
+		function show() {
+			var table = document.getElementById("td1");
+			for (var i = 1; i <= 9; i++) {
+				var trn = document.createElement("p");
+				table.appendChild(trn);
+				for (var j = 1; j <= i; j++) {
+					/* var tep = j + "*" + i + "=" + (j * i);
+					var tdn = document.createTxtNode();
+					trn.appendChild(tdn); */
+					trn.innerHTML= j + "*" + i + "=" + (j * i);
+					
+				}
+				document.write("<br>");
+			}
+		}
+		function show2() {
+			var table = document.getElementById("my_table2");
+			for (var i = 1; i <= 9; i++) {
+				var trn = document.createElement("tr");
+				table.appendChild(trn);
+				var tdn = document.createElement("td");
+				trn.appendChild(tdn);
+				for (var j = 1; j <= i; j++) {
+					sum += i * j;
+				}
+				tdn.innerText = sum;
+				sum=0;
+			}
+		}
+	</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

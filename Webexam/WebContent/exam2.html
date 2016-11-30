@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html>
+ <head>
+  <title>打印加法口诀</title>
+  <script>
+   function show(){
+    var table=document.getElementById("tb");
+    for(var i=1;i<=9;i++){
+     var trn=document.createElement("tr");
+     table.appendChild(trn);  
+     for(var j=1;j<=i;j++){
+      var tdn=document.createElement("td");
+      trn.appendChild(tdn);
+      tdn.innerHTML=j+"*"+i+"="+(j*i);
+     }
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <input type="button"value="打印加法口诀表"onclick="show();"/>
+  <div style="border:1px solid #000000;background-color:#999999">
+   <table id="tb">
+   </table>
+  </div>
+ </body>
